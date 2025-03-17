@@ -1,0 +1,30 @@
+package correcion_examen_escrito;
+
+public class Contrarrelojista extends Ciclista{
+	
+	private double veloc_max;
+	
+	
+	public Contrarrelojista(String nombre) {
+		super(nombre);
+		this.veloc_max = veloc_max;
+	}
+
+	
+	public double getVeloc_max() {
+		return veloc_max;
+	}
+	public void setVeloc_max(double veloc_max) {
+		this.veloc_max = veloc_max;
+	}
+
+
+	public String visualizaCiclista() {
+		return super.visualizaCiclista()+" Contrarrelojista\n";
+	}
+	
+	public String toString() {
+		return super.toString()+"Velocidad máxima: "+veloc_max+" Km/h\n";
+	}
+
+}

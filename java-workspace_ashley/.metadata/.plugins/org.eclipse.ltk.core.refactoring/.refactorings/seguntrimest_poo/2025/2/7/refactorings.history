@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;herencia.ejemplo&apos; to &apos;seguntrimest_herencia/src&apos;&#x0D;&#x0A;- Original project: &apos;seguntrimest_poo&apos;&#x0D;&#x0A;- Destination element: &apos;seguntrimest_herencia/src&apos;&#x0D;&#x0A;- Original element: &apos;seguntrimest_poo/src/herencia.ejemplo&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=seguntrimest_herencia/src" element1="/src&lt;herencia.ejemplo" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1739177489484" version="1.0"/>
+</session>

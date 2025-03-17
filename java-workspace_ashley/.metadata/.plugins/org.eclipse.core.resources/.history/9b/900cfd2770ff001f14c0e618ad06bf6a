@@ -1,0 +1,35 @@
+package correcion_examen_escrito;
+
+public class Velocista extends Ciclista{
+	
+	private double potencia_promedio,sprint;
+
+	public Velocista(String nombre) {
+		super(nombre);
+	}
+	
+	
+	public double getPotencia_promedio() {
+		return potencia_promedio;
+	}
+	public void setPotencia_promedio(double potencia_promedio) {
+		this.potencia_promedio = potencia_promedio;
+	}
+	
+
+	public double getSprint() {
+		return sprint;
+	}
+	public void setSprint(double sprint) {
+		this.sprint = sprint;
+	}
+
+	public String visualizaCiclista() {
+		return super.visualizaCiclista()+" Velocista\n";
+	}
+
+	public String toString() {
+		return super.toString()+"Potencia media: "+potencia_promedio+" Vatios\nSprint: "+sprint+" Km/h\n";
+	}
+	
+}

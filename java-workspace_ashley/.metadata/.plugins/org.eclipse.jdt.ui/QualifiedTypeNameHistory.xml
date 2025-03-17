@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="poo.persona.Persona"/>
+    <fullyQualifiedTypeName name="poo.cesta.Productos"/>
+    <fullyQualifiedTypeName name="poo.cesta.Sabores"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="herencia.ejemplo.modif.Triangulo"/>
+    <fullyQualifiedTypeName name="herencia.granalmacen.Productos"/>
+    <fullyQualifiedTypeName name="herencia.granalmacen.Venta"/>
+    <fullyQualifiedTypeName name="java.security.cert.Certificate"/>
+</qualifiedTypeNameHistroy>
