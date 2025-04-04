@@ -1,0 +1,44 @@
+package ejercicio_String;
+
+public class TestString {
+
+	public static void main(String[] args) {
+ 
+		String s1 = "El pato Donald es blanco";
+		String s2 = "El PaTO Donald es BlANCo";
+		String s3 = "El pato Donald es blanco y de pequeño tamaño";
+		String s4 = "El pato Donald tiene el pelaje blanco";
+		
+		System.out.println(s1.charAt(3));
+		System.out.println();
+		System.out.println(s1.charAt(6));
+		System.out.println();
+		System.out.println(s1.compareTo(s2));
+		System.out.println();
+		System.out.println(s1.compareToIgnoreCase(s2));
+		System.out.println();
+		System.out.println(s1.concat(s3));
+		System.out.println();
+		System.out.println(s4.indexOf(0044));
+		System.out.println();
+		System.out.println(s2.lastIndexOf(0044));
+		System.out.println();
+		System.out.println(s3.length());
+		System.out.println();
+		System.out.println(s3.replace('o', 'a'));
+		System.out.println();
+		System.out.println(s3.split(s1));
+		System.out.println();
+		System.out.println(s2.substring(8));
+		System.out.println();
+		System.out.println(s2.toLowerCase());
+		System.out.println();
+		System.out.println(s1.toUpperCase());
+		System.out.println();
+		System.out.println(s3.trim());
+		System.out.println();
+		System.out.println(s3.toString());
+		System.out.println();
+	}
+
+}

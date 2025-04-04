@@ -1,41 +1,23 @@
 package ejercicio_PruebaFigura;
 
-public abstract class FiguraAbstracta {
+public abstract class FiguraAbstracta implements Colorable, Transformable{
 
-	double posc_x, posc_y;
+	//ATRIBUTOS
 	Colores color;
 
-	public FiguraAbstracta(double posc_x, double posc_y, Colores color) {
-		this.posc_x = posc_x;
-		this.posc_y = posc_y;
+	//CONSTRUCTOR
+	public FiguraAbstracta(Colores color) {
 		this.color = color;
 	}
 
-
-	public double getPosc_x() {
-		return posc_x;
-	}
-
-	public void setPosc_x(double posc_x) {
-		this.posc_x = posc_x;
-	}
-
-	public double getPosc_y() {
-		return posc_y;
-	}
-
-	public void setPosc_y(double posc_y) {
-		this.posc_y = posc_y;
-	}
-
+	//METODOS
 	public abstract double Area();
 	
 	public abstract double Perimetro();
 	
-	public abstract String mostrarPosicion();
-	
+	//TO STRING
 	public String toString() {
-		return "Posición: "+posc_x+" , "+posc_y+"\nColor: "+color+"\n";
+		return "Color: "+color+"\n";
 	}
 	
 	

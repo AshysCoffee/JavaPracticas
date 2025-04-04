@@ -8,4 +8,8 @@
     <fullyQualifiedTypeName name="herencia.granalmacen.Productos"/>
     <fullyQualifiedTypeName name="herencia.granalmacen.Venta"/>
     <fullyQualifiedTypeName name="java.security.cert.Certificate"/>
+    <fullyQualifiedTypeName name="ejercicioCircuito.Circuitos"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ejercicio_String.MyString"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

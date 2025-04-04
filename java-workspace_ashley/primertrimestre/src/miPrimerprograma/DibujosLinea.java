@@ -5,15 +5,23 @@ import java.util.Scanner;
 public class DibujosLinea {
 
 	public static void main(String[] args) {
-		int numero, linea;
-		Scanner sc=new Scanner(System.in);
-		linea=1;
-		System.out.println("Introduzca el tamaño del dibujo");
+		int numero, asterisco;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		asterisco=1;
+		
+		System.out.print("Introduzca el tamaño del dibujo: ");
+		
 		numero=sc.nextInt();
-		while (linea<=numero) {
+		
+		
+		while (asterisco<=numero) {
 			System.out.print("*");
-			linea++;
+			asterisco++;
 		}
+		
 		sc.close();
+		
 	}//main
 }//class

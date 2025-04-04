@@ -23,12 +23,11 @@ public class CuentaCorriente extends Cuenta{
 		}
 	}
 
-	public String Retirar (int cantidad) {
+	public void Retirar (int cantidad) {
 		if (cantidad>super.getSaldo()) {
 			sobregiro++;
 			super.setSaldo(getSaldo()-cantidad);
 		}
-		return super.Retirar(cantidad);
 	}
 	
 	public void ExtractoMensual () {

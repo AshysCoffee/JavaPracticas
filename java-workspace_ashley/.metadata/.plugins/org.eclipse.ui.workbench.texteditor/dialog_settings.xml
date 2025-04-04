@@ -4,6 +4,10 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="true"/>
 		<list key="findhistory">
+			<item value="&quot;\n&quot;"/>
+			<item value="print"/>
+			<item value="println"/>
+			<item value="\n\n"/>
 			<item value="consigna"/>
 			<item value="valor"/>
 			<item value="mesActual"/>
@@ -12,6 +16,9 @@
 			<item value="alto"/>
 		</list>
 		<list key="replacehistory">
+			<item value="println"/>
+			<item value="print"/>
+			<item value="\n"/>
 			<item value="inicio"/>
 			<item value="this.mes"/>
 		</list>

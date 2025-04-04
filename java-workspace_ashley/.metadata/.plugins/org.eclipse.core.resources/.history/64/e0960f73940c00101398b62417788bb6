@@ -1,0 +1,32 @@
+package ejercicio_PruebaFigura;
+
+public abstract class FiguraAbstracta {
+
+	Colores color;
+
+	public FiguraAbstracta(Colores color) {
+		this.color = color;
+	}
+
+	
+	public Colores getColor() {
+		return color;
+	}
+
+	public void setColor(Colores color) {
+		this.color = color;
+	}
+
+
+
+	public abstract double Area();
+	
+	public abstract double Perimetro();
+	
+	
+	public String toString() {
+		return "Color: "+color+"\n";
+	}
+	
+	
+}

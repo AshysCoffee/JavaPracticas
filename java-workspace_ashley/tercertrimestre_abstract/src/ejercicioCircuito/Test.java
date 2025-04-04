@@ -1,43 +1,48 @@
 package ejercicioCircuito;
 
-import java.util.ArrayList;
-
 public class Test {
-	
-	private ArrayList <Circuitos> Placa =new ArrayList <Circuitos>();
-	private ArrayList <Resistencias> Resistencias = new ArrayList<Resistencias>();
 	
 	public static void main(String[] args) {
 		
 		double Total=0; //creamos esta variable para sumar todas las intensidades y dar el total
 		
+		Placa p1 = new Placa ("Placa nº1");
+		
 		Circuitos c1= new EnSerie (34);
 		Circuitos c2= new EnSerie (45);
 		Circuitos c3= new EnSerie (100);
 		
-		/*Placa.add(c1);
-		Placa.add(c2);
-		Placa.add(c3);
+		Resistencias r1 = new Resistencias (200.0);
+		Resistencias r2 = new Resistencias (400.0);
+		Resistencias r3 = new Resistencias (500.0);
+		Resistencias r4 = new Resistencias (50.0);
+		Resistencias r5 = new Resistencias (700.0);
+		Resistencias r6 = new Resistencias (100.0);
+
 		
-		c1.AddResistencia(200);
-		c1.AddResistencia(400);
-		c1.AddResistencia(500);
+		p1.addCircuito(c1);
+		p1.addCircuito(c2);
+		p1.addCircuito(c3);
 		
-		c2.AddResistencia(50);
-		c2.AddResistencia(700);
+		c1.AddResistencia(r1);
+		c1.AddResistencia(r2);
+		c1.AddResistencia(r3);
 		
-		c3.AddResistencia(100);
+		c2.AddResistencia(r4);
+		c2.AddResistencia(r5);
+		
+		c3.AddResistencia(r6);
 		
 
-		for (Circuitos c:Placa) {
+		for (Circuitos c: p1.Circuitos) {
 			System.out.println(c.toString());
 		}
 		
-		for (Circuitos c:Placa) {
+		for (Circuitos c: p1.Circuitos) {
 			Total=Total+c.CalcularIntensidad();
 		}
 		
-		System.out.printf("Total de intensidades: %.2f ",Total," A");*/
+		System.out.printf("Total de intensidades: %.2f ",Total," A");
 	}
 
 }

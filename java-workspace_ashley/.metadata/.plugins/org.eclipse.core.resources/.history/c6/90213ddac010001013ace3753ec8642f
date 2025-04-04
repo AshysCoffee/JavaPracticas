@@ -1,0 +1,34 @@
+package miPrimerprograma;
+
+public class Pruebas {
+
+	public static void main(String[] args) {
+		int a ,b, vueltas;
+		a=1;
+		b=3;
+		vueltas=0;
+		for ( int i=a; i<= a+b; i++) {
+			for (int j=a+b; j>=0; j--) {
+				System.out.println("Las incognitas son: i="+i+" y j="+j);
+				vueltas++;	
+			}
+			System.out.println("-----------");
+		}
+		System.out.println("vueltas: "+vueltas+"");
+
+		
+
+int monas_chinas_chichonas = 3;
+int mona_china_culona = 1;
+int mona_china_muslona = 1;
+
+int contador=2;
+
+while (monas_chinas_chichonas>contador){
+	System.out.print("Hay "+monas_chinas_chichonas+"chichonas");
+	monas_chinas_chichonas--;
+}
+		
+	}
+
+}

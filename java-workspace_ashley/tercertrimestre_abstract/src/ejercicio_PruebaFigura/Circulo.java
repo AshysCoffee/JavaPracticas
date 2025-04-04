@@ -1,14 +1,13 @@
 package ejercicio_PruebaFigura;
 
-public class Circulo extends FiguraAbstracta {
+public class Circulo extends FiguraAbstracta implements Transformable, Colorable{
 
 	private double radio, diametro, area, perimetro;
 	final double pi= 3.14;
 	
-	public Circulo( double posc_x, double posc_y, double radio, double diametro, Colores color) {
-		super( posc_x, posc_y, color);
+	public Circulo(double radio, Colores color) {
+		super(color);
 		this.radio = radio;
-		this.diametro = diametro;
 	}
 
 	public double getRadio() {
@@ -46,19 +45,31 @@ public class Circulo extends FiguraAbstracta {
 	
 	//////
 	public double Area() {
-		return area=pi*(radio*radio);
+		return  this.area=pi*(radio*radio);
 	}
 	
 	public double Perimetro() {
-		return perimetro=pi*this.diametro;
+		return this.perimetro=pi*(this.radio*2);
 	}
-	
-	public String mostrarPosicion() {
-		return +posc_x+" , "+posc_y;
+
+	public void cambiarColor(Colores color) {
+		this.color=color;
+	}
+
+	public Colores IndicaColor() {
+		return super.color;
+	}
+
+
+	public void Escalar(double factor) {
+		this.diametro*=factor;
+		this.radio*=factor;
+		this.area*=factor;
+		this.perimetro*=factor;
 	}
 	
 	public String toString () {
-		return "Circulo-----\n"+super.toString()+ "Radio: "+radio+"\nDiametro: "+diametro+"\nArea: "+Area()+"\nPerimetro: "+Perimetro()+"\n";
+		return "Circulo-----\n"+super.toString()+ "Area: "+Area()+"\nPerimetro: "+Perimetro()+"\n";
 	}
 	
 	

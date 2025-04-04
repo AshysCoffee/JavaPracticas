@@ -69,22 +69,7 @@ public class Cuenta {
 		this.ingresos++;
 	}
 
-	public String Retirar (int cantidad) {
-		String s="";
-		if (cantidad<this.saldo && this.saldo-cantidad>0){
-			this.saldo-=cantidad;
-			this.retiros++;
-		}
 
-		if (saldo-cantidad<0) {
-			s=("La cuenta no debe quedarse debajo de 0€.");
-		}
-
-		if (cantidad>saldo) {
-			s=("La cantidad deseada a retirar no puede superar su saldo actual de "+saldo);
-		}
-		return s;
-	}
 	
 	public void InteresMensual() { //el usuario pone la tasa
 		double tasa_mensual = this.tasa_anual / 12;
@@ -96,6 +81,24 @@ public class Cuenta {
 		this.saldo-=this.comision_mensual;
 		InteresMensual();
 	}
+	
+	
+	public void Retirar (int cantidad) throws Exception{
+		
+		if (saldo-cantidad<0) {
+			throw new Exception("La cuenta no debe quedarse debajo de 0€.");
+		}
+
+		if (cantidad>saldo) {
+			throw new Exception("La cantidad deseada a retirar no puede superar su saldo actual de "+saldo);
+		}
+
+		if (cantidad<this.saldo && this.saldo-cantidad>0){
+			this.saldo-=cantidad;
+			this.retiros++;
+		}
+	}
+	
 	
 	public String toString() {
 		String s="";

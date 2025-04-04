@@ -2,11 +2,10 @@ package ejercicioCircuito;
 
 public class Resistencias {
 
-	private double resistencia;
+	protected double resistencia;
 
 	public Resistencias(double resistencia) {
-		super();
-		this.resistencia = resistencia;
+		this.resistencia= resistencia;
 	}
 
 	public double getResistencia() {
@@ -16,6 +15,18 @@ public class Resistencias {
 	public void setResistencia(double resistencia) {
 		this.resistencia = resistencia;
 	}
+	
+	public double Resistencia_Total() {
+		return 0;
+	};
+	
+	public void AddResistencia (Resistencias r){
+		
+	};
+	
+	public void DeleteResistencia (Resistencias r) {
+		
+	};	
 	
 	public String toString () {
 		return "Resistencia: "+resistencia;

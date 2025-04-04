@@ -1,0 +1,64 @@
+package ejercicio_String;
+
+public class TestmyString {
+
+	public static void main(String[] args) {
+		
+		MyString s1 = new MyString ("El pato Donald es blanco");
+		MyString s2 = new MyString ("La pata Daisy tiene un lazo rosa");
+		MyString s3 = new MyString ("No se quien es Mickey Mouse");
+		MyString s4 = new MyString ("Minnie Mouse es pequeña");
+		
+		try {
+			System.out.println(s1.myCharAt(98));//da la letra en la posicion que pude (los espacios no cuentan)
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} 
+		System.out.println();
+		
+		try {
+			System.out.println(s1.myCharAt(3));//da la letra en la posicion que pude (los espacios no cuentan)
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} 
+		System.out.println();
+
+	/*	
+		System.out.println(s1.myCompareTo(s2));
+		System.out.println();
+		System.out.println(s1.myCompareToIgnoreCase(s4));
+		System.out.println();
+		
+		s1.myConcat(s3);
+		
+		System.out.println();
+		System.out.println(s4.myIndexOf('p'));
+		System.out.println();
+		System.out.println(s2.myLastIndexOf('y'));
+		System.out.println();
+		System.out.println(s3.myLength());
+		System.out.println();
+		System.out.println(s3.myReplace('M', 'P'));
+		System.out.println();
+		System.out.println(s3.mySplit(' '));
+		System.out.println();
+		try {
+			System.out.println(s2.mySubstring(8, 12));
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		System.out.println();
+		System.out.println(s2.myToLowerCase());
+		System.out.println();
+		System.out.println(s1.myToUpperCase());
+		System.out.println();
+		System.out.println(s3.myTrim());
+		System.out.println();
+		System.out.println(s3.toString());
+		System.out.println();
+		
+		*/
+
+	}
+
+}

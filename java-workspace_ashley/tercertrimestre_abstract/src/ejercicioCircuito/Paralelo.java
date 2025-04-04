@@ -5,9 +5,10 @@ public class Paralelo extends Circuitos{
 	private double intensidad_Total;
 	
 	//CONSTRUCTOR
-	public Paralelo(int voltaje) {
+	public Paralelo(double voltaje) {
 		super(voltaje);
 	}
+	
 	
 	//GET/SET-TERS
 	public double getIntensidad_Total() {
@@ -21,6 +22,10 @@ public class Paralelo extends Circuitos{
 	//METODOS
 	public void AddResistencia (Resistencias r) {
 		super.AddResistencia(r);
+	}		//Metodo heredado de la clase Circuitos
+	
+	public void DeleteResistencia (Resistencias r) {
+		super.DeleteResistencia(r);
 	}		//Metodo heredado de la clase Circuitos
 	
 	public double CalcularIntensidad() {

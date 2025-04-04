@@ -2,15 +2,16 @@ package ejercicioCircuito;
 
 import java.util.ArrayList;
 
-public class Circuitos {
+public class Circuitos{
 
 	//Establecemos los atributos pedidos de la clase
 	private double intensidad, voltaje, total_resistencias;
-	ArrayList <Resistencias> Resistencias = new ArrayList<Resistencias>();
+	protected ArrayList <Resistencias> Resistencias;
 	
 	//CONSTRUCTOR
 	public Circuitos(double voltaje) {
 		this.voltaje = voltaje;
+		this.Resistencias = new ArrayList <Resistencias>(); // en este caso, ponemos el this. (nombre-array) = new ArrayList <tipo/objeto>
 	}
 
 
@@ -47,13 +48,17 @@ public class Circuitos {
 		Resistencias.add(r);	
 		this.total_resistencias+=r.getResistencia();
 		
-	}	//Este método va sumando las resistencias insertadas para luego calcular la intensidad en un circuito.
+	}	//Este método va sumando las resistencias insertadas para luego calcular la intensidad en un circuito y añade el objeto al arraylist.
 	
 	public void DeleteResistencia (Resistencias r) {
 		Resistencias.remove(r);	
 		this.total_resistencias-=r.getResistencia();
 		
-	}	
+	}	//Este método va sumando las resistencias insertadas para luego calcular la intensidad en un circuito y añade el objeto al arraylist.
+	
+	public double SumaTotalResis() {
+		return this.total_resistencias;
+	}
 	
 	public double CalcularIntensidad() {
 		return 0;
@@ -68,4 +73,5 @@ public class Circuitos {
 	public String toString () {
 		return "Voltaje: "+voltaje+"  V\n";
 	}
+
 }

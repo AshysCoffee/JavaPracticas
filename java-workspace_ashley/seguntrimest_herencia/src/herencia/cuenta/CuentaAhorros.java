@@ -21,14 +21,16 @@ public class CuentaAhorros extends Cuenta{
 		super.Ingresar(cantidad);
 	}
 
-	public String Retirar (int cantidad) {
-		return super.Retirar(cantidad);
+	public void Retirar (int cantidad) throws Exception {
+		super.Retirar(cantidad);
 	}
 	
 	public void ExtractoMensual () {
+		double nueva_comision=0;
 		super.ExtractoMensual();
 		if (super.getRetiros()>4) {
-			double nueva_comision=super.getComision_mensual()-1000;
+			nueva_comision=super.getComision_mensual()-1000;
+			
 		}
 	}
 	

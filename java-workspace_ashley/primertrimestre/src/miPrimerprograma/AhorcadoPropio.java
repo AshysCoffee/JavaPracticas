@@ -1,0 +1,104 @@
+package miPrimerprograma;
+
+import java.util.Scanner;
+
+public class AhorcadoPropio {
+
+	public static void main(String[] args) {
+		
+		try (Scanner sc = new Scanner(System.in)) {
+			new DibujoAhorcado();
+			
+			int aux /*tamaño palabra*/, comprobador=1, fallos=0;
+			char letras=9;
+			char [] comprobador_letras = new char [27];
+			boolean acertado = false;
+			
+			System.out.println("Escribe tu palabra letra a letra, cuando hayas terminado escribe un punto .");
+
+			for (aux=0; letras!='.'; aux++) { //for para meter letras
+				letras = sc.next().charAt(0);
+				comprobador_letras[aux]=letras;
+				
+			}
+
+			System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+			
+			char [] palabra_final = new char [aux];
+			char [] huecos = new char [palabra_final.length];
+			
+			//se copia palabra en el comprobador
+			for (aux=0; (aux+1)<palabra_final.length;aux++) {
+				palabra_final[aux] = comprobador_letras[aux];
+				huecos[aux]='_';
+				System.out.print(" "+huecos[aux]+" ");
+			}
+			
+			letras='a'; //iniciamos con a y el programa va sumando en ASCII solito
+			
+			
+		for(int i=0; i<27; i++) {
+			
+			if(i==14) {
+				comprobador_letras[i]= 'ñ';
+			}else{
+				comprobador_letras[i]=letras;
+				letras++;
+				}		
+			}
+		
+			while ((fallos!=7)&&(comprobador!=huecos.length)) {
+				
+				System.out.println("");
+				letras = sc.next().charAt(0);
+				
+				for (aux=0; aux<27; aux++) {
+					
+					if ((aux<palabra_final.length)&&(letras==palabra_final[aux])) {
+						huecos[aux]=palabra_final[aux];
+						comprobador++;
+						acertado=true;
+					}
+						
+					if (letras==comprobador_letras[aux]) {		
+						comprobador_letras[aux]='0';
+						
+					}
+					
+				}
+				
+					if (acertado!=true) {
+						fallos++;
+					}
+					
+				
+				
+				acertado=false;
+				System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+				for(aux=0; (aux+1)<palabra_final.length; aux++) {
+					System.out.print(" "+huecos[aux]+" ");
+				}
+				
+				
+				System.out.println("\n\n FALLASTE " + fallos + " VECES            ");
+				DibujoAhorcado.dibujo(fallos); //fallos es un numero que se mete en un switch
+				System.out.println("\n\n FALTAN POR USAR LAS SIGUIENTES LETRAS:        ");
+				for (aux=0; aux<comprobador_letras.length; aux++) {
+					if (comprobador_letras[aux]!='0') {
+						System.out.print(comprobador_letras[aux]+",");
+					}
+				}
+				
+			}
+				
+				if (fallos==7) {
+					System.out.println("\n\n PERDISTE CON "+ fallos +" FALLOS, BIEEEEEEN!!!!");
+				}else{
+					System.out.println("\n\n GANASTE CON "+ fallos +" FALLOS!!!!");
+				}
+
+			}
+
+		}
+		
+}

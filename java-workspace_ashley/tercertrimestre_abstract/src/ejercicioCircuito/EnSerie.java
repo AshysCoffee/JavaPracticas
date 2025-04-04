@@ -1,11 +1,14 @@
 package ejercicioCircuito;
 
-import java.util.ArrayList;
-
 public class EnSerie extends Circuitos{
 
 	private double intensidad_Total;
-	ArrayList <Resistencias> Resistencias = new ArrayList<Resistencias>();
+
+	//CONSTRUCTOR
+	public EnSerie(double voltaje) {
+		super(voltaje);
+	}
+
 	
 	//CONSTRUCTOR
 	public EnSerie(int voltaje) {
@@ -25,6 +28,10 @@ public class EnSerie extends Circuitos{
 	public void AddResistencia (Resistencias r) {
 		super.AddResistencia(r);
 	}	//Metodo heredado de la clase Circuitos
+	
+	public void DeleteResistencia (Resistencias r) {
+		super.DeleteResistencia(r);
+	}		//Metodo heredado de la clase Circuitos
 	
 	public double CalcularIntensidad() {
 		double intensidad=((super.getVoltaje()/super.getTotal_resistencias()));

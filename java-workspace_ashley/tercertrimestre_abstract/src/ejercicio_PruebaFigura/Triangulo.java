@@ -1,14 +1,21 @@
 package ejercicio_PruebaFigura;
 
-public class Triangulo extends FiguraAbstracta{
+public class Triangulo extends FiguraAbstracta implements Transformable, Colorable{
 
 	private double altura, base, lado_1, lado_2, lado_3, area, perimetro;
 
-	public Triangulo( double posc_x, double posc_y, Colores color, double altura,
+	public Triangulo( Colores color, double altura,
 			double base, double lado_1, double lado_2 , double lado_3) {
-		super(posc_x, posc_y, color);
+		super(color);
 		this.altura = altura;
 		this.base = base;
+		this.lado_1 = lado_1;
+		this.lado_2 = lado_2;
+		this.lado_3 = lado_3;
+	}
+	
+	public Triangulo( Colores color, double lado_1, double lado_2 , double lado_3) {
+		super(color);
 		this.lado_1 = lado_1;
 		this.lado_2 = lado_2;
 		this.lado_3 = lado_3;
@@ -73,19 +80,35 @@ public class Triangulo extends FiguraAbstracta{
 
 	///////
 	public double Area() {
-		return this.area=(this.base*this.altura)/2;
+		return this.area=((this.lado_1*this.lado_2)*(Math.sqrt(3)))/4;
 	}
 	
 	public double Perimetro() {
 		return this.perimetro=lado_1+lado_2+lado_3;
 	}
 	
-	public String mostrarPosicion() {
-		return +posc_x+" , "+posc_y;
+	public void cambiarColor(Colores color) {
+		this.color=color;
+	}
+
+
+	public Colores IndicaColor() {
+		return super.color;
+	}
+
+
+	public void Escalar(double factor) {
+		this.lado_1*=factor;
+		this.lado_2*=factor;
+		this.lado_3*=factor;
+		this.altura*=factor;
+		this.base*=factor;
+		this.area*=factor;
+		this.perimetro*=factor;
+		
 	}
 	
 	public String toString() {
-		return "Triangulo-----\n"+super.toString()+"Lado 1: "+lado_1+"\nLado 2: "+lado_2+"\nLado 3: "
-				+lado_3+"\nAltura: "+altura+"\nBase: "+base+"\nArea: "+Area()+"\nPerimetro: "+Perimetro()+"\n";
+		return "Triangulo-----\n"+super.toString()+"Area: "+Area()+"\nPerimetro: "+Perimetro()+"\n";
 	}
 }

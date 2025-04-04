@@ -1,0 +1,24 @@
+package miPrimerprograma;
+
+import java.util.Scanner;
+
+public class DibujosLinea {
+
+	public static void main(String[] args) {
+		int numero, asterisco;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		asterisco=1;
+		
+		System.out.println("Introduzca el tamaño del dibujo");
+		
+		numero=sc.nextInt();
+		
+		while (asterisco<=numero) {
+			System.out.print("*");
+			asterisco++;
+		}
+		sc.close();
+	}//main
+}//class

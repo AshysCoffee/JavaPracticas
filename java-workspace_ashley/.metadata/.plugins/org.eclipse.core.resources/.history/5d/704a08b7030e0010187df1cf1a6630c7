@@ -1,0 +1,43 @@
+package ejercicio_String;
+
+public class TestString {
+
+	public static void main(String[] args) {
+ 
+		String s1 = "El pato Donald es blanco";
+		String s2 = "La pata Daisy tiene un lazo rosa";
+		String s3 = "No se quien es Mickey Mouse";
+		String s4 = "Minnie Mouse es pequeña";
+		
+		System.out.println(s1.charAt(88)); //da la letra en la posicion que pude (los espacios no cuentan)
+		System.out.println();
+
+		System.out.println(s1.compareTo(s2));
+		System.out.println();
+		System.out.println(s1.compareToIgnoreCase(s4));
+		System.out.println();
+		System.out.println(s1.concat(s3));
+		System.out.println();
+		System.out.println(s4.indexOf('p'));
+		System.out.println();
+		System.out.println(s2.lastIndexOf('y'));
+		System.out.println();
+		System.out.println(s3.length());
+		System.out.println();
+		System.out.println(s3.replace('M', 'P'));
+		System.out.println();
+		System.out.println(s3.split(" "));
+		System.out.println();
+		System.out.println(s2.substring(8));
+		System.out.println();
+		System.out.println(s2.toLowerCase());
+		System.out.println();
+		System.out.println(s1.toUpperCase());
+		System.out.println();
+		System.out.println(s3.trim());
+		System.out.println();
+		System.out.println(s3.toString());
+		System.out.println();
+	}
+
+}
