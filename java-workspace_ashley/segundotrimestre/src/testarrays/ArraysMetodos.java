@@ -1,6 +1,7 @@
 package testarrays;
 
 public class ArraysMetodos {
+	
 	public static int BinarySearch (int x[], int valor) {
 		for (int i=0; i<x.length;i++) {
 			if (x[i]==valor) {

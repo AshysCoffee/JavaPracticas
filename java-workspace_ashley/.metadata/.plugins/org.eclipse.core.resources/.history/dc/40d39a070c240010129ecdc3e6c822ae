@@ -1,0 +1,78 @@
+package pruebas;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+
+public class TestCliente {
+
+	public static void main(String[] args) {
+		
+		List<Cliente> listaClientes = new ArrayList <Cliente>();
+		Collection<Cliente> coleccionCliente = listaClientes;
+		
+		Cliente cliente1 = new Cliente ("111","Marta","12/02/2000");
+
+		coleccionCliente.add(cliente1); //añadimos el elemento
+		coleccionCliente.remove(cliente1);// lo eliminamos
+		
+		coleccionCliente.add(new Cliente ("111", "Marta", "12/02/2000"));
+		coleccionCliente.add(new Cliente ("115", "Jorge", "16/03/1999"));
+		coleccionCliente.add(new Cliente("112", "Carlos", "01/10/2002"));
+		
+		System.out.println("Tamanio de la coleccion: "+coleccionCliente.size()+"\n"); //da el tamanio del tamanio
+		System.out.println("¿Esta vacio? = "+coleccionCliente.isEmpty()+"\n");//da verdadero o falso si esta vacio
+		
+		coleccionCliente.contains (new Cliente ("115", "Jorge", "16/03/1999")); //pregunta si contiene
+		
+		coleccionCliente.contains(new Cliente ("115"));
+		
+		System.out.println(coleccionCliente+"\n");
+		
+		
+		Collection<Cliente> otrosClientes = new ArrayList<>(); 
+		
+		otrosClientes.add(new Cliente ("111", "Marta", "12/02/2000"));//los que ya estaban
+		otrosClientes.add(new Cliente ("112", "Carlos", "01/10/2002"));
+		
+		System.out.println(otrosClientes+"\n");
+		
+		System.out.println(coleccionCliente.containsAll(otrosClientes)+"\n"); //al tener los dos elementos en común, dara true
+		
+		otrosClientes.add(new Cliente ("211", "Ana", "07/12/2001"));//uno diferente
+
+		System.out.println(coleccionCliente.containsAll(otrosClientes)+"\n"); // al tener uno diferente saldra false
+		
+		System.out.println(coleccionCliente.addAll(otrosClientes)+"\n"); //añade todos incluso los que se repiten
+		
+		System.out.println(coleccionCliente+"\n");
+		
+		System.out.println(coleccionCliente.remove(new Cliente ("111")));
+		
+		System.out.println(coleccionCliente.removeAll(otrosClientes)+"\n");
+		
+		
+		Iterator<Cliente> it = coleccionCliente.iterator();
+		
+		System.out.println(it.hasNext()+"\n");
+		
+		System.out.println(it.next()+"\n");
+		
+		while (it.hasNext()) {
+			Cliente p = it.next();
+			if (p.getFechaNacimiento().compareTo (LocalDate.of (2000, 1, 1)) < 0) {
+				it.remove(); /*elimina p, ultimo cliente devuelto por next ()
+		¡No usar coleccionClie.remove(p)!*/
+			}
+		}
+		
+		for (Cliente c : coleccionCliente) {
+			System.out.println(c+"\n");
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,28 @@
+package pruebas_list;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main_Lista {
+
+	public static void main(String[] args) {
+		
+		List<Integer> listaEnteros = new ArrayList<> ();
+		
+		listaEnteros.add(3);
+		listaEnteros.add(1);
+		listaEnteros.add(-2);
+		listaEnteros.add(0);
+		listaEnteros.add(3);
+		listaEnteros.add(7);
+		
+		listaEnteros.get(2);
+
+		Integer y = listaEnteros.set (3, 10);
+		System.out.println("y: "+ y);
+		System.out.println(listaEnteros);
+
+
+	}
+
+}

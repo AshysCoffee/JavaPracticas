@@ -8,12 +8,12 @@
 		</section>
 	</section>
 	<section name="ImportExportAction">
-		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.ZipFile"/>
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.FileSystem"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>
 		<section name="ImportExportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="619"/>
+			<item key="DIALOG_X_ORIGIN" value="268"/>
 			<item key="DIALOG_Y_ORIGIN" value="142"/>
 			<item key="DIALOG_WIDTH" value="700"/>
 			<item key="DIALOG_HEIGHT" value="550"/>
@@ -24,10 +24,11 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\ashle\java-workspace_ashley\tercertrimestre_interfaz\src\archivos - copia"/>
 			<item value="C:\Users\ashle\java-workspace_ashley\seguntrimest_poo\src"/>
 		</list>
 		<section name="FileSystemImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="619"/>
+			<item key="DIALOG_X_ORIGIN" value="-60"/>
 			<item key="DIALOG_Y_ORIGIN" value="142"/>
 			<item key="DIALOG_WIDTH" value="805"/>
 			<item key="DIALOG_HEIGHT" value="703"/>
@@ -35,10 +36,10 @@
 		</section>
 	</section>
 	<section name="WorkbenchPreferenceDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="419"/>
-		<item key="DIALOG_Y_ORIGIN" value="70"/>
+		<item key="DIALOG_X_ORIGIN" value="-133"/>
+		<item key="DIALOG_Y_ORIGIN" value="19"/>
 		<item key="DIALOG_WIDTH" value="1101"/>
-		<item key="DIALOG_HEIGHT" value="674"/>
+		<item key="DIALOG_HEIGHT" value="1001"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="ZipFileImportWizard">
@@ -53,5 +54,19 @@
 			<item key="DIALOG_HEIGHT" value="610"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>
+	</section>
+	<section name="org.eclipse.ui.internal.dialogs.WorkbenchEditorsDialog">
+		<item key="allPersp" value="false"/>
+		<item key="sort" value="0"/>
+		<list key="bounds">
+			<item value="457"/>
+			<item value="48"/>
+			<item value="1006"/>
+			<item value="693"/>
+		</list>
+		<list key="columns">
+			<item value="319"/>
+			<item value="639"/>
+		</list>
 	</section>
 </section>

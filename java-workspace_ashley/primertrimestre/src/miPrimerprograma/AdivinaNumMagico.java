@@ -1,3 +1,4 @@
+package miPrimerprograma;
 
 import java.util.Scanner;
 import java.util.Random;

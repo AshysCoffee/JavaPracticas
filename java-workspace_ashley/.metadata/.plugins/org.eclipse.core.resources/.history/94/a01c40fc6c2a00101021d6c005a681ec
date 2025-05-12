@@ -1,0 +1,74 @@
+package pruebas_collections;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+
+public class Cliente implements Comparable <Cliente>{
+
+	private String dni, nombre;
+	private LocalDate fechaNacimiento;
+	
+	
+	public Cliente(String dni, String nombre, String fechaNacimiento) {
+		super();
+		this.dni = dni;
+		this.nombre = nombre;
+		DateTimeFormatter formatoFechas= DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		this.fechaNacimiento = LocalDate.parse(fechaNacimiento, formatoFechas);
+		
+	}
+	
+	public Cliente(String dni) {
+		super();
+		this.dni = dni;
+	}
+	
+	public int edad() {
+		return (int)fechaNacimiento.until(LocalDate.now(),ChronoUnit.YEARS);
+	}
+	
+	public String getDni() {
+		return dni;
+	}
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+
+
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+
+	public LocalDate getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+	public void setFechaNacimiento(LocalDate fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+
+	public int compareTo(Cliente c1) {
+		return dni.compareTo(c1.dni);
+	}
+	
+	public boolean equals(Object ob) {
+		return dni.equals(((Cliente)ob).dni);
+		
+	}
+
+
+	@Override
+	public String toString() {
+		return "Cliente [DNI=" + dni + ", Nombre=" + nombre + ", Fecha de nacimiento=" + fechaNacimiento + "]\n";
+	}
+	
+	
+
+}

@@ -1,0 +1,38 @@
+package seriali.atleta;
+
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Serializar implements Serializable {
+
+	public static void main(String[] args) {
+		
+		List <Atleta> Equipo = new ArrayList <Atleta>();
+		
+		Atleta a1 = new Atleta ("Carlos", 12,9);
+		Atleta a2 = new Atleta ("Luis", 15,8);
+		Atleta a3 = new Atleta ("Sofía", 11,10);
+		Atleta a4 = new Atleta ("Ana", 10,7);
+		
+		Equipo.add(a1);
+		Equipo.add(a2);
+		Equipo.add(a3);
+		Equipo.add(a4);
+		
+	
+
+		try (ObjectOutputStream oos = new ObjectOutputStream (new FileOutputStream("Atleta.ser"))) {
+			oos.writeObject(Equipo);
+		} catch (IOException e) {
+			e.getMessage();
+		}
+		
+		
+	}
+
+}

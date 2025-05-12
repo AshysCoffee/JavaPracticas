@@ -1,0 +1,43 @@
+package seriali.atleta;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Deserealizar {
+
+	public static void main(String[] args) {
+		
+		List <Atleta> Equipo = new ArrayList <Atleta>();
+
+		Atleta a1 = new Atleta ("Carlos", 12,9);
+		Atleta a2 = new Atleta ("Luis", 15,8);
+		Atleta a3 = new Atleta ("Sofía", 11,10);
+		Atleta a4 = new Atleta ("Ana", 10,7);
+
+		Equipo.add(a1);
+		Equipo.add(a2);
+		Equipo.add(a3);
+		Equipo.add(a4);
+
+	
+		try {
+			ObjectInputStream oos = new ObjectInputStream (new FileInputStream("Atleta.ser"));
+			try {
+				Equipo = ((List<Atleta>) oos.readObject());
+			} catch (ClassNotFoundException e) {
+				e.getMessage();
+			}
+			for (Atleta a:Equipo) {
+				System.out.println(a.toString());
+			}
+		} catch (IOException e) {
+			e.getMessage();
+		}
+		
+
+	}
+
+}

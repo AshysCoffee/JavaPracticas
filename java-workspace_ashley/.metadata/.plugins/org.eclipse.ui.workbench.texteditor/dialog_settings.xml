@@ -4,6 +4,12 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="true"/>
 		<list key="findhistory">
+			<item value="frase"/>
+			<item value="MyString"/>
+			<item value="ms3"/>
+			<item value="ms2"/>
+			<item value="ms1"/>
+			<item value="aux"/>
 			<item value="&quot;\n&quot;"/>
 			<item value="print"/>
 			<item value="println"/>
@@ -13,9 +19,14 @@
 			<item value="mesActual"/>
 			<item value="ancho"/>
 			<item value="anchobase"/>
-			<item value="alto"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Frase"/>
+			<item value="String"/>
+			<item value="s3"/>
+			<item value="s2"/>
+			<item value="s1"/>
+			<item value="i"/>
 			<item value="println"/>
 			<item value="print"/>
 			<item value="\n"/>

@@ -9,35 +9,35 @@ public class AhorcadoPropio {
 		try (Scanner sc = new Scanner(System.in)) {
 			new DibujoAhorcado();
 			
-			int aux /*tamaño palabra*/, comprobador=1, fallos=0;
+			int i /*tamaño palabra*/, comprobador=1, fallos=0;
 			char letras=9;
 			char [] comprobador_letras = new char [27];
 			boolean acertado = false;
 			
 			System.out.println("Escribe tu palabra letra a letra, cuando hayas terminado escribe un punto .");
 
-			for (aux=0; letras!='.'; aux++) { //for para meter letras
+			for (i=0; letras!='.'; i++) { //for para meter letras
 				letras = sc.next().charAt(0);
-				comprobador_letras[aux]=letras;
+				comprobador_letras[i]=letras;
 				
 			}
 
 			System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 			
-			char [] palabra_final = new char [aux];
+			char [] palabra_final = new char [i];
 			char [] huecos = new char [palabra_final.length];
 			
 			//se copia palabra en el comprobador
-			for (aux=0; (aux+1)<palabra_final.length;aux++) {
-				palabra_final[aux] = comprobador_letras[aux];
-				huecos[aux]='_';
-				System.out.print(" "+huecos[aux]+" ");
+			for (i=0; (i+1)<palabra_final.length;i++) {
+				palabra_final[i] = comprobador_letras[i];
+				huecos[i]='_';
+				System.out.print(" "+huecos[i]+" ");
 			}
 			
 			letras='a'; //iniciamos con a y el programa va sumando en ASCII solito
 			
 			
-		for(int i=0; i<27; i++) {
+		for(int j=0; j<27; j++) {
 			
 			if(i==14) {
 				comprobador_letras[i]= 'ñ';
@@ -52,16 +52,16 @@ public class AhorcadoPropio {
 				System.out.println("");
 				letras = sc.next().charAt(0);
 				
-				for (aux=0; aux<27; aux++) {
+				for (i=0; i<27; i++) {
 					
-					if ((aux<palabra_final.length)&&(letras==palabra_final[aux])) {
-						huecos[aux]=palabra_final[aux];
+					if ((i<palabra_final.length)&&(letras==palabra_final[i])) {
+						huecos[i]=palabra_final[i];
 						comprobador++;
 						acertado=true;
 					}
 						
-					if (letras==comprobador_letras[aux]) {		
-						comprobador_letras[aux]='0';
+					if (letras==comprobador_letras[i]) {		
+						comprobador_letras[i]='0';
 						
 					}
 					
@@ -75,17 +75,17 @@ public class AhorcadoPropio {
 				
 				acertado=false;
 				System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-				for(aux=0; (aux+1)<palabra_final.length; aux++) {
-					System.out.print(" "+huecos[aux]+" ");
+				for(i=0; (i+1)<palabra_final.length; i++) {
+					System.out.print(" "+huecos[i]+" ");
 				}
 				
 				
 				System.out.println("\n\n FALLASTE " + fallos + " VECES            ");
 				DibujoAhorcado.dibujo(fallos); //fallos es un numero que se mete en un switch
 				System.out.println("\n\n FALTAN POR USAR LAS SIGUIENTES LETRAS:        ");
-				for (aux=0; aux<comprobador_letras.length; aux++) {
-					if (comprobador_letras[aux]!='0') {
-						System.out.print(comprobador_letras[aux]+",");
+				for (i=0; i<comprobador_letras.length; i++) {
+					if (comprobador_letras[i]!='0') {
+						System.out.print(comprobador_letras[i]+",");
 					}
 				}
 				

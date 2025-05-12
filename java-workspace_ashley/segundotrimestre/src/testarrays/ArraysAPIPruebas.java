@@ -15,7 +15,10 @@ public class ArraysAPIPruebas {
 			System.out.print("El número 18 se encuentra en la posición ");
 			System.out.println((Arrays.binarySearch(array1, 1))); //este metodo da un numero de vuelta y indica la poscion del valor buscado
 
-
+			
+			System.out.print("El número 6 se encuentra en la posición ");
+			System.out.println((Arrays.binarySearch(array4, 6)));
+			
 			System.out.println("");
 
 			System.out.print("Ambos arrays coinciden en: (-1 indica que no coinciden en ningun apartado): ");

@@ -1,0 +1,52 @@
+package interf.atleta;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Test_Atleta {
+
+public static void main(String[] args) {
+		
+		ArrayList <Atleta> Equipo = new ArrayList <Atleta>();
+		
+		Atleta a1 = new Atleta ("Carlos", 12,9);
+		Atleta a2 = new Atleta ("Luis", 15,8);
+		Atleta a3 = new Atleta ("Sofía", 11,10);
+		Atleta a4 = new Atleta ("Ana", 10,7);
+		
+		Atleta grupo [] = {a1,a2,a3,a4};
+		
+		System.out.println(Arrays.toString(grupo));
+		
+		
+		System.out.println(a4.compareTo(a1)+"\n");
+		System.out.println(a2.compareTo(a3)+"\n");
+		System.out.println(a3.compareTo(a3)+"\n");
+		
+		Arrays.sort(grupo);
+		
+		System.out.println(Arrays.toString(grupo));
+		
+		System.out.println("\n\n");
+		
+		Equipo.add(a1);
+		Equipo.add(a2);
+		Equipo.add(a3);
+		Equipo.add(a4);
+		
+		for (Atleta a:Equipo) {
+			System.out.println(a.toString());
+		}
+		
+		Collections.sort(Equipo, new ComparadorEdades ()); // para poner una clase comparator hay que ponerlo asi
+		
+		System.out.println("\n\n");
+		
+		for (Atleta a:Equipo) {
+			System.out.println(a.toString());
+		}
+
+	}
+	
+}

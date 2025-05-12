@@ -1,6 +1,6 @@
 package miPrimerprograma;
 
-import String;
+import java.util.Scanner;
 
 public class CajeroSupeer {
 
