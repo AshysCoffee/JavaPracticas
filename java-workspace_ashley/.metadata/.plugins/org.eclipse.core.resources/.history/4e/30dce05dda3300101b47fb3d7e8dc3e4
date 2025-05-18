@@ -1,0 +1,11 @@
+package superTIA;
+
+public class Encargado extends Empleado{
+
+	public Encargado(int id, int dni, String nombre, Rol estatus) {
+		super(id, dni, nombre, estatus);
+	}
+	
+	
+
+}

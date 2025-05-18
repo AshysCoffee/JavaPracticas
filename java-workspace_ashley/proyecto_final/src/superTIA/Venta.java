@@ -1,0 +1,78 @@
+package superTIA;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Venta {
+	
+	private int idVenta;
+    private Cliente cliente;
+    private ArrayList<Producto> Productos;
+    private LocalDate fecha;
+    private Estado estado;
+
+    public Venta(int idVenta, Cliente cliente) throws DatosInvalidosException {
+    	
+    	if (idVenta < 1) throw new DatosInvalidosException("ID no puede ser negativo  ni 0.");
+        if (cliente == null) throw new DatosInvalidosException("Cliente obligatorio.");
+    	
+        this.idVenta = idVenta;
+        this.cliente = cliente;
+        this.Productos = new ArrayList<>();
+        this.fecha = LocalDate.now();  // Fecha actual sin tiempo
+        this.estado = Estado.PENDIENTE;
+    }
+
+   
+    public int getIdVenta() {
+        return idVenta;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public ArrayList<Producto> getProductos() {
+        return Productos;
+    }
+    
+    
+    public void agregarProducto(Producto producto) {
+    	Productos.add(producto);
+    }
+
+    public void quitarProducto(Producto producto) {
+    	Productos.remove(producto);
+    }
+    
+    public String mostrarCompra (Cliente c) {
+    	String s="";
+    	for (Venta v : c.getHistorial()) {
+    		s+=("Venta ID: " + v.getIdVenta());
+    		if (v.getProductos().isEmpty()) {
+    			s+=("Esta venta no tiene productos.");
+    		} else {
+    			s+="Productos: \n" + v.getProductos();
+
+    		}
+    	}
+    	return s;
+    }	
+
+    public double calcularTotal() {
+    	double total = 0;
+    	for (Producto p : Productos) {
+    		total += p.getPrecio(); // Asumo que Producto tiene getPrecio()
+    	}
+    	return total;
+    }
+
+}

@@ -1,0 +1,11 @@
+package superTIA;
+
+public class ProductoSinGluten implements SinGluten{
+
+
+	public double PlusSinGluten() {
+
+		return 0;
+	}
+
+}

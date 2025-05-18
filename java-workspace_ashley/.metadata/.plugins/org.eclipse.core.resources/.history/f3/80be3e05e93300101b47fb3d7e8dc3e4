@@ -1,0 +1,60 @@
+package superTIA;
+
+public class SupermercadoTIA {
+
+	public static void main(String[] args) {
+
+		Empleado e1;
+		try {
+			e1 = new Cajero (26102, "64559751Z", "");
+			System.out.println(e1.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("\n");
+		
+		Empleado e2;
+		try {
+			e2 = new Reponedor (15616, "", "Lorena Gala");
+			System.out.println(e2.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("\n");
+		
+		Empleado e3;
+		try {
+			e3 = new Encargado (84652, "62184322M", "Jessica Perez");
+			System.out.println(e3.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("\n");
+		
+		Empleado e4;
+		try {
+			e4 = new Cajero (0, "33248955Z", "Fernet Lendo");
+			System.out.println(e4.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("\n");
+		
+		Empleado e5;
+		try {
+			e5 = new Reponedor (22146, "21534266P", "David Alvala");
+			System.out.println(e5.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+
+		Producto p1 = new ProductoBio (9354, 154, "Soja ", 6.21, Categoria.ALIMENTACION, "");
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package superTIA;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+@SuppressWarnings("serial")
+public class ProductoSinGluten extends Producto implements SinGluten, Serializable{
+
+
+	public ProductoSinGluten(int id, int stock, String nombre, double precio, Categoria tipo, LocalDate fecha_caducidad)
+			throws DatosInvalidosException {
+		super(id, stock, nombre, precio+0.14, tipo, fecha_caducidad);
+	}
+	
+
+	public boolean PlusSinGluten() {
+		return true;
+	}
+
+
+	public String toString () {
+		return super.toString()+"[Precio = "+getPrecio()+"€]\n";
+	}
+
+	
+}

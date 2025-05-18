@@ -1,0 +1,9 @@
+package superTIA;
+
+public interface ConPlus {
+
+	double getPrecioConPlus();
+	
+    double getPlus();
+	
+}

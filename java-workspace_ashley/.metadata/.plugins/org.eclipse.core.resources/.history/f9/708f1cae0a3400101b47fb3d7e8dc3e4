@@ -1,0 +1,58 @@
+package superTIA;
+
+import java.time.LocalDate;
+
+public class SupermercadoTIA {
+
+	public static void main(String[] args) {
+		
+		Cliente c1 = null;
+		try {
+		    c1 = new Cliente(215, "Castell Perez", "perezraton@gmail.com");
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		if (c1 != null) {
+		    try {
+		        Venta v1 = new Venta(256965, c1);
+		        c1.agregarVenta(v1);
+		    } catch (DatosInvalidosException e) {
+		    	System.out.println(e.getMessage());
+		    }
+		}
+		
+		
+		try {
+			Empleado e1 = new Cajero (26102, "64559751Z", "");
+			System.out.println(e1.toString());
+			Empleado e2 = new Reponedor (15616, "", "Lorena Gala");
+			System.out.println(e2.toString());
+			Empleado e3 = new Encargado (84652, "62184322M", "Jessica Perez");
+			System.out.println(e3.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("\n");
+		
+		try {
+			Producto p1 = new ProductoBio (9354, 154, "Soja", 6.21, Categoria.ALIMENTACION, LocalDate.of(2028, 2, 24));
+			System.out.println(p1.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			Producto p2 = new ProductoSinGluten (3241, 94, "Bagguette", 6.21, Categoria.ALIMENTACION, LocalDate.of(2025, 5, 19));
+			
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+
+		
+	}
+
+
+}

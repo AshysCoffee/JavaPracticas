@@ -1,0 +1,82 @@
+package superTIA;
+
+import java.time.LocalDate;
+
+public abstract class Producto {
+	
+	private int id, stock;
+	private String nombre;
+	private double precio;
+	private Categoria tipo;
+	private LocalDate fecha_caducidad;
+	private LocalDate fechaMinima=LocalDate.of(1970, 1, 1);
+	
+
+	public Producto(int id, int stock, String nombre, double precio, Categoria tipo, LocalDate fecha_caducidad) throws DatosInvalidosException {
+
+		if (id < 1) throw new DatosInvalidosException("ID no puede estar vacío.");
+		if (stock == 0) throw new DatosInvalidosException ("No se encuentra en stock");
+		if (stock < 0) throw new DatosInvalidosException ("No puede haber valores negativos");
+	    if (nombre == null || nombre.isEmpty()) throw new DatosInvalidosException("Nombre obligatorio.");
+	    if (precio <=0) throw new DatosInvalidosException ("Debe ponerle un precio al producto");
+	    if (tipo == null ) throw new DatosInvalidosException("Categoría requerida.");
+	    if (fecha_caducidad == null || fecha_caducidad.isBefore(fechaMinima)) throw new DatosInvalidosException("Debe tener una fecha de caducidad mayor a 1/1/1970");
+		
+		this.id = id;
+		this.stock = stock;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.tipo = tipo;
+		this.fecha_caducidad = fecha_caducidad;
+	}
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getStock() {
+		return stock;
+	}
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public double getPrecio() {
+		return precio;
+	}
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+	public Categoria getTipo() {
+		return tipo;
+	}
+	public void setTipo(Categoria tipo) {
+		this.tipo = tipo;
+	}
+
+	public LocalDate getFecha_caducidad() {
+		return fecha_caducidad;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "Producto :"+ nombre + "\n[ID = " + id + ", Stock = " + stock + "]\n[Precio = " + precio + "€, Sección = "
+				+ tipo + "]\n[ Fecha de caducidad: "+fecha_caducidad+"]\n";
+	}
+	
+
+	
+
+}

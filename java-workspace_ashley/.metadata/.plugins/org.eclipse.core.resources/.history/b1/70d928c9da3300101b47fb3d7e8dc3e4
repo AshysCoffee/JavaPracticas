@@ -1,0 +1,13 @@
+package superTIA;
+
+public class Reponedor extends Empleado {
+
+	private Rol estatus;
+	
+	public Reponedor(int id, int dni, String nombre, Rol estatus) {
+		super(id, dni, nombre);
+		this.estatus = Rol.REPONEDOR;
+
+	}
+
+}

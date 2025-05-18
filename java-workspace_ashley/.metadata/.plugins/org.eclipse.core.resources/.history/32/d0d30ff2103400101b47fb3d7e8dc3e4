@@ -1,0 +1,76 @@
+package superTIA;
+
+import java.time.LocalDate;
+
+public class SupermercadoTIA {
+
+	public static void main(String[] args) {
+
+		Almacen almacen_Alcampo = new Almacen ();
+
+		Producto p1,p2,p3,p4,p5,p6,p7,p8 = null;
+
+		try {
+			p1 = new ProductoBio (9354, 154, "Soja", 6.21, Categoria.ALIMENTACION, LocalDate.of(2028, 2, 24));
+			p2 = new ProductoSinGluten (3241, 94, "Bagguette", 0.68, Categoria.ALIMENTACION, LocalDate.of(2025, 5, 19));
+			p3 = new Producto (0605, 51, "Cerveza", 2.14, Categoria.ALCOHOL);
+			p4 = new Producto (24,32, "Cascos USB", 8.62, Categoria.BAZAR);
+			p5 = new Producto (58, 12, "Lejía", 2.97, Categoria.DROGUERIA);
+			p6 = new Producto (3852, 27, "Vitamina D - Para niños", 14.22, Categoria.PARAFARMACIA, LocalDate.of(2026, 1, 11));
+			p7 = new ProductoSinGluten (5201, 69, "Waffles", 4.99, Categoria.ALIMENTACION, LocalDate.of(2027, 9, 24));
+			p8 = new ProductoBio (6863, 11, "Quinoa Mix", 9.00, Categoria.ALIMENTACION, LocalDate.of(2026, 11, 05));
+
+			almacen_Alcampo.agregarProductos(p1, 98);
+			almacen_Alcampo.agregarProductos(p2, 62);
+			almacen_Alcampo.agregarProducto(p3);
+			almacen_Alcampo.agregarProducto(p4);
+			almacen_Alcampo.agregarProducto(p5);
+			almacen_Alcampo.agregarProducto(p6);
+			almacen_Alcampo.agregarProducto(p7);
+			almacen_Alcampo.agregarProducto(p8);
+
+
+
+			Cliente c1 = new Cliente(215, "Castell Perez", "perezraton@gmail.com");
+		
+
+
+					Venta v1 = new Venta(256965, c1);
+					v1.agregarProducto(p1);
+					v1.agregarProducto(p4);
+					v1.agregarProducto(p3);
+					v1.agregarProducto(p3);
+					v1.agregarProducto(p6);
+
+					c1.agregarVenta(v1);
+					
+					for (Venta v : c1.getHistorial()) {
+						System.out.println("Venta ID: " + v.getIdVenta());
+						if (v.getProductos().isEmpty()) {
+							System.out.println("Esta venta no tiene productos.");
+						} else {
+							System.out.println("Productos: \n" + v.getProductos());
+						}
+
+					}
+
+			
+
+
+				Empleado e1 = new Cajero (26102, "64559751Z", "");
+				Empleado e2 = new Reponedor (15616, "98531154", "Lorena Gala");
+				Empleado e3 = new Encargado (84652, "62184322M", "Jessica Perez");
+				Empleado e4 = new Encargado (36400, "62184322M", "Jessica Perez");
+	
+
+			System.out.println("\n");
+
+		
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+
+}

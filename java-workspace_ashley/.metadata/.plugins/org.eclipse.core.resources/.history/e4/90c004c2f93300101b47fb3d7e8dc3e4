@@ -1,0 +1,57 @@
+package superTIA;
+
+import java.util.ArrayList;
+
+public class Cliente {
+
+	private int id;
+	private String nombre, email;
+	private ArrayList <Venta> Compras;
+	
+	
+	public Cliente(int id, String nombre, String email, ArrayList<Venta> compras) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.email = email;
+		Compras = new ArrayList<Venta>();
+	}
+
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombres(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+
+	public ArrayList<Venta> getCompras() {
+		return Compras;
+	}
+
+
+
+	public String toString() {
+		return "Cliente "+ nombre +"[ID =" + id + ", Email=" + email + "]\n";
+	}
+	
+	
+	
+}

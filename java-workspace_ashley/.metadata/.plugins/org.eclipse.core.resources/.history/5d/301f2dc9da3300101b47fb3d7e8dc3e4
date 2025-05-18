@@ -1,0 +1,14 @@
+package superTIA;
+
+public class Encargado extends Empleado{
+
+	private Rol estatus;
+	
+	public Encargado(int id, int dni, String nombre, Rol estatus) {
+		super(id, dni, nombre);
+		this.estatus = Rol.ENCARGADO;
+	}
+	
+	
+
+}

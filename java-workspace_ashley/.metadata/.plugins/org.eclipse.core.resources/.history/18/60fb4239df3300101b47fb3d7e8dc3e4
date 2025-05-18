@@ -1,0 +1,63 @@
+package superTIA;
+
+public class Empleado {
+	
+	public int id;
+	private String dni, nombre;
+
+
+
+	public Empleado(int id, String dni, String nombre) throws DatosInvalidosException {
+
+	    if (id < 1 throw new DatosInvalidosException("ID no puede ser negativo.");
+        if (nombre == null || nombre.isEmpty()) throw new DatosInvalidosException("Nombre obligatorio.");
+        if (dni == null || dni.isEmpty()) throw new DatosInvalidosException("DNI requerido.");
+     
+		
+		this.id = id;
+		this.dni = dni;
+		this.nombre = nombre;
+	}
+	
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getDni() {
+		return dni;
+	}
+
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+
+
+	public String toString() {
+		return "Empleado ID = " + id + " \n[DNI : " + dni + ", Nombre del empleado : " + nombre+"]\n";
+	}
+
+	
+	
+	
+	
+}

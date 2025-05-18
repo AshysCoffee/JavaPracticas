@@ -1,0 +1,13 @@
+try (ObjectInputStream ois = new ObjectInputStream (new FileInputStream("Atleta.ser"))) {
+			
+			@SuppressWarnings("unchecked")
+			List<Atleta> entrada = (List<Atleta>) ois.readObject();
+			for (Atleta atleta : entrada) {
+                System.out.println(atleta);
+            }
+			
+		} catch (IOException e) {
+			System.err.println(e);
+		} catch (ClassNotFoundException e) {
+			System.err.println(e);
+		}

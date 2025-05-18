@@ -1,0 +1,6 @@
+Cliente Castell Perez[ID =215, Email=perezraton@gmail.com]
+
+Cliente Gómez Ruiz[ID =216, Email=gomezruiz@hotmail.com]
+
+Cliente López García[ID =217, Email=lopezgarcia@yahoo.es]
+

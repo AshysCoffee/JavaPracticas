@@ -1,0 +1,10 @@
+package superTIA;
+
+public class ProductoBio implements Bio{
+
+
+	public double PlusBio() {
+		return 0;
+	}
+
+}

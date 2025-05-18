@@ -1,0 +1,25 @@
+package superTIA;
+
+public class Cajero extends Empleado{
+
+	private Rol estatus;
+	
+	public Cajero(int id, int dni, String nombre) {
+		super(id, dni, nombre);
+		this.estatus = Rol.CAJERO;
+	}
+	
+	
+	public Rol getEstatus() {
+		return estatus;
+	}
+
+	public void setEstatus(Rol estatus) {
+		this.estatus = estatus;
+	}
+	
+	public String toString() {
+		return super.toString() + "[ROL = "+this.estatus+"]";
+	}
+	
+}

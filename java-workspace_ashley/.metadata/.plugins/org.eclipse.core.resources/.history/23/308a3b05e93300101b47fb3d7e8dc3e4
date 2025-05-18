@@ -1,0 +1,23 @@
+package superTIA;
+
+import java.time.LocalDate;
+
+public class ProductoBio extends Producto implements Bio{
+
+
+	public ProductoBio(int id, int stock, String nombre, double precio, Categoria tipo, LocalDate fecha_caducidad)
+			throws DatosInvalidosException {
+		super(id, stock, nombre, precio, tipo, fecha_caducidad);
+	}
+
+	public double PlusBio() {
+		double plusBio= (getPrecio()*0.7);
+		setPrecio(plusBio+getPrecio());
+		return getPrecio();
+	}
+
+	public String toString () {
+		return super.toString();
+	}
+
+}

@@ -1,0 +1,63 @@
+package superTIA;
+
+import java.time.LocalDate;
+
+public class SupermercadoTIA {
+
+	public static void main(String[] args) {
+
+		Almacen almacen_Alcampo = new Almacen ();
+
+		try {
+			Producto p1 = new ProductoBio (9354, 154, "Soja", 6.21, Categoria.ALIMENTACION, LocalDate.of(2028, 2, 24));
+			Producto p2 = new ProductoSinGluten (3241, 94, "Bagguette", 0.68, Categoria.ALIMENTACION, LocalDate.of(2025, 5, 19));
+			Producto p3 = new Producto (0605, 51, "Cerveza", 2.14, Categoria.ALCOHOL);
+			Producto p4 = new Producto (24,32, "Cascos USB", 8.62, Categoria.BAZAR);
+			Producto p5 = new Producto (58, 12, "Lejía", 2.97, Categoria.DROGUERIA);
+			Producto p6 = new Producto (3852, 27, "Vitamina D - Para niños", 14.22, Categoria.PARAFARMACIA, LocalDate.of(2026, 1, 11));
+			Producto p7 = new ProductoSinGluten (5201, 69, "Waffles", 4.99, Categoria.ALIMENTACION, LocalDate.of(2027, 9, 24));
+			Producto p8 = new ProductoBio (6863, 11, "Quinoa Mix", 9.00, Categoria.ALIMENTACION, LocalDate.of(2026, 11, 05));
+
+			almacen_Alcampo.agregarProductos(p1, 98);
+			almacen_Alcampo.agregarProductos(p2, 62);
+			almacen_Alcampo.agregarProductos(p3, 245);
+			almacen_Alcampo.agregarProductos(p4, 14);
+			almacen_Alcampo.agregarProductos(p5, 34);
+			almacen_Alcampo.agregarProductos(p6, 70);
+			almacen_Alcampo.agregarProductos(p7, 25);
+			almacen_Alcampo.agregarProductos(p8, 47);
+
+			System.out.println(almacen_Alcampo.mostrarInventario());
+			
+			Cliente c1 = new Cliente(215, "Castell Perez", "perezraton@gmail.com");
+
+
+			Venta v1 = new Venta(256965, c1);
+			v1.agregarProducto(p1);
+			v1.agregarProducto(p4);
+			v1.agregarProducto(p3);
+			v1.agregarProducto(p3);
+			v1.agregarProducto(p6);
+
+			c1.agregarVenta(v1);
+
+			v1.mostrarCompra(c1);
+
+
+			Empleado e1 = new Cajero (26102, "64559751Z", "David Matamoros");
+			Empleado e2 = new Reponedor (15616, "98531154", "Lorena Gala");
+			Empleado e3 = new Encargado (84652, "62184322M", "Jessica Perez");
+			Empleado e4 = new Cajero (36400, "62184322M", "Pedro Jimenez");
+
+
+			System.out.println("\n");
+
+		
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+
+}

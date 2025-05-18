@@ -1,0 +1,68 @@
+package superTIA;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Almacen{
+
+    private ArrayList<Producto> Almacen;
+
+    public Almacen() {
+        Almacen = new ArrayList<Producto>();
+    }
+
+    
+    public List<Producto> getAlmacen() {
+		return Almacen;
+	}
+
+
+	public void agregarProducto(Producto p) {
+        Almacen.add(p);
+    }
+    
+    public void agregarProductos(Producto p, int cantidad) {
+        int contador=0;
+    	while (contador < cantidad) {
+        	Almacen.add(p);
+        }
+    	
+    }
+
+    public int contarProducto(Producto p1) throws Exception{
+        for (Producto p : Almacen) {
+            if (p.getId()==p1.getId()) {;
+                return p.getStock();
+            }
+        }
+        throw new Exception ("No existe este producto en este momento");
+    }
+
+    public String mostrarInventario() {
+    	String s="";
+    	for (Producto p : Almacen) {
+    		
+    		if (Almacen.getProductos().isEmpty()) {
+    			s+=("Esta venta no tiene productos.");
+    		} else {
+    			s+="Productos: \n" + getProductos();
+    		}
+    	}
+    	
+    		if (Almacen.isEmpty()) {
+           s+=("El inventario está vacío.");
+            return;
+        }
+
+        System.out.println("Inventario actual:");
+        for (Producto p : Almacen) {
+            System.out.println(p+"\n");
+        }
+    }
+    
+    public void eliminarProducto(Producto p) {
+    	Almacen.remove(p);
+    }
+    
+    
+}

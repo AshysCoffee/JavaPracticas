@@ -1,0 +1,85 @@
+package superTIA;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.time.LocalDate;
+import java.util.List;
+
+
+public class SupermercadoTIA {
+
+	public static void main(String[] args) {
+
+		Cliente c1 = null;
+		try {
+		    c1 = new Cliente(215, "Castell Perez", "perezraton@gmail.com");
+		} catch (DatosInvalidosException e) {
+		    e.printStackTrace();
+		}
+		if (c1 != null) {
+		    try {
+		        Venta v1 = new Venta(256965, c1);
+		    } catch (DatosInvalidosException e) {
+		        e.printStackTrace();
+		    }
+		}
+		
+		
+		try {
+			Empleado e1 = new Cajero (26102, "64559751Z", "");
+			System.out.println(e1.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("\n");
+		
+		try {
+			Empleado e2 = new Reponedor (15616, "", "Lorena Gala");
+			System.out.println(e2.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("\n");
+		
+
+		try {
+			Empleado e3 = new Encargado (84652, "62184322M", "Jessica Perez");
+			System.out.println(e3.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("\n");
+		
+
+		try {
+			Empleado e4 = new Cajero (0, "33248955Z", "Fernet Lendo");
+			System.out.println(e4.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("\n");
+		
+		try {
+			Producto p1 = new ProductoBio (9354, 154, "Soja", 6.21, Categoria.ALIMENTACION, LocalDate.of(2028, 2, 24));
+			System.out.println(p1.toString());
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			Producto p2 = new ProductoSinGluten (3241, 94, "Bagguette", 6.21, Categoria.ALIMENTACION, LocalDate.of(2025, 5, 19));
+			
+		} catch (DatosInvalidosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+
+		
+	}
+
+}

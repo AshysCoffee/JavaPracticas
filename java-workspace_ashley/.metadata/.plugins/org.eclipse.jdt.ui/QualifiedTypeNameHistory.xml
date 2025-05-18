@@ -15,9 +15,14 @@
     <fullyQualifiedTypeName name="ejercicio_palindroma.Palindroma"/>
     <fullyQualifiedTypeName name="interf.inmobiliaria.Inmueble"/>
     <fullyQualifiedTypeName name="interf.inmobiliaria.EstadoConstruccion"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="seriali.atleta.Atleta"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="superTIA.Rol"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="superTIA.Categoria"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="superTIA.RegistroDocumentos"/>
+    <fullyQualifiedTypeName name="superTIA.Tienda"/>
 </qualifiedTypeNameHistroy>

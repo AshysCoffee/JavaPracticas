@@ -1,0 +1,58 @@
+package superTIA;
+
+public class Empleado {
+	
+	public int id, dni;
+	private String nombre;
+
+
+
+	public Empleado(int id, int dni, String nombre) {
+		super();
+		this.id = id;
+		this.dni = dni;
+		this.nombre = nombre;
+	}
+	
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public int getDni() {
+		return dni;
+	}
+
+
+	public void setDni(int dni) {
+		this.dni = dni;
+	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+
+
+	public String toString() {
+		return "Empleado ID =" + id + " \n[ DNI : " + dni + ", Nombre del empleado : " + nombre+" ]\n";
+	}
+
+	
+	
+	
+	
+}

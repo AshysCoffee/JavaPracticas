@@ -1,0 +1,7 @@
+package superTIA;
+
+public interface SinGluten {
+
+	public double PlusSinGluten ();
+	
+}

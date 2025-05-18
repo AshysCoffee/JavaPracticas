@@ -1,0 +1,57 @@
+package superTIA;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class RegistroDocumentos {
+	
+	
+
+	  public RegistroDocumentos() {
+	}
+
+	public void guardarClientes(List<Cliente> clientes, String nombreArchivo) {
+		  
+	        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) {
+	            for (Cliente c : clientes) {
+	                writer.write(c.toString());
+	                writer.newLine();
+	            }
+	        } catch (IOException e) {
+	            System.err.println("Error al guardar clientes: " + e.getMessage());
+	        }
+	    }
+
+	    // Lee clientes desde un archivo de texto y los devuelve en una lista
+	    public List<Cliente> leerClientes(String nombreArchivo) {
+	        List<Cliente> clientes = new ArrayList<>();
+	        File Registro = new File(nombreArchivo);
+
+	        try (BufferedReader reader = new BufferedReader(new FileReader(nombreArchivo))) {
+	            String linea = reader.readLine();
+	            while (linea != null) {
+	            	while ((linea = reader.readLine()) != null) {
+	                    String[] partes = linea.split(",");
+	                    if (partes.length == 3) {
+	                        int id = Integer.parseInt(partes[0]);
+	                        String nombre = partes[1];
+	                        String email = partes[2];
+	                        Cliente cliente = new Cliente(id, nombre, email);
+	                        clientes.add(cliente);
+	                    }
+	            	} 
+	            }  
+	        } catch (IOException | DatosInvalidosException e) {
+	            System.err.println("Error al leer clientes: " + e.getMessage());
+	        }
+
+	        return clientes;
+	    }
+	
+}
